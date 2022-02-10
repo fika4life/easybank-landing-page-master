@@ -31,6 +31,12 @@ h4,
 h5,
 h6 {
   color: var(--dark-blue);
+  font-weight: 300;
+}
+
+h5 {
+  color: var(--grayish-blue);
+  font-size: 20px;
 }
 
 a {
@@ -41,6 +47,12 @@ a {
 p {
   font-size: 18px;
   line-height: 1.5;
+  font-weight: 300;
+  color: var(--grayish-blue);
+}
+
+header {
+  background-color: var(--very-light-gray);
 }
 
 nav {
@@ -71,11 +83,12 @@ nav ul.main-nav li {
 .hero {
   display: grid;
   grid-template-columns: 600px auto;
-  height: 90vh;
+  overflow-y: visible;
 }
 
 .hero-text {
   margin: 100px auto;
+
   padding-left: 7.5rem;
 }
 .hero-text > h1 {
@@ -106,4 +119,21 @@ button.cta {
 
   background-repeat: no-repeat, no-repeat;
   background-position: top -120px left 230px, top -260px left 30px;
+  height: auto;
+}
+
+/* value prop grid section */
+
+.value-prop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.value-prop h2 {
+  font-size: 2.3rem;
+}
+
+.value-prop-grid h3 {
+  font-size: 1.4rem;
 }
