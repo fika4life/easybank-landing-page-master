@@ -202,12 +202,35 @@ button.cta {
 /* footer */
 footer {
   background-color: var(--dark-blue);
+  padding: 3rem 0;
 }
 footer .container {
+  max-width: var(--max-width);
   display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-areas: 'footer-left footer-nav .  footer-right';
 }
 
-.footer-social {
+.footer-left {
+  grid-area: 'footer-left';
+  padding-right: 6rem;
+}
+
+.footer-nav {
+  grid-area: 'footer-nav';
+}
+
+ul.footer-nav {
+  columns: 2;
+}
+
+.footer-right {
+  grid-area: 'footer-right';
+  justify-self: end;
+}
+
+ul.footer-social {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
