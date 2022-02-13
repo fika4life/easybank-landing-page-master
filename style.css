@@ -9,6 +9,7 @@
   --very-light-gray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
   --max-width: 1200px;
+  --border-radius: 6px;
 }
 
 body {
@@ -157,7 +158,7 @@ button.cta {
 
 /* latest articles */
 #latest-articles {
-  background-color: #fff;
+  background-color: var(--very-light-gray);
   padding-top: 50px;
 }
 
@@ -167,7 +168,20 @@ button.cta {
 }
 
 .article {
-  max-width: 160px;
+  max-width: 240px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  margin-bottom: 80px;
+}
+
+.article img {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.article .article-text {
+  padding: 1.4rem 1.4rem 0.2rem;
 }
 
 .article .article-text .author {
@@ -179,6 +193,7 @@ button.cta {
 .article .article-text h6 {
   font-size: 16px;
   color: var(--dark-blue);
+  margin: 0.8rem 0;
 }
 .article p {
   font-size: 13px;
