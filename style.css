@@ -92,13 +92,12 @@ nav ul.main-nav li {
 
 .hero {
   display: grid;
-  grid-template-columns: 600px auto;
+  grid-template-columns: 40% auto;
   overflow-y: visible;
 }
 
 .hero-text {
   margin: 100px auto;
-
   padding-left: 7.5rem;
 }
 .hero-text > h1 {
@@ -110,7 +109,6 @@ nav ul.main-nav li {
 .hero-text p {
   font-weight: 300;
   color: var(--grayish-blue);
-
   margin-bottom: 2rem;
 }
 
@@ -121,6 +119,8 @@ button.cta {
   background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
   color: #fff;
   font-weight: 700;
+  display: inline-block;
+  min-width: 150px;
 }
 
 .hero-images {
@@ -128,7 +128,6 @@ button.cta {
 
   background-repeat: no-repeat;
   background-position: top -260px left 30px;
-  height: auto;
 }
 
 .hero-images img {
@@ -257,6 +256,14 @@ ul.footer-nav li a {
 }
 
 @media screen and (max-width: 960px) {
+  .hero-images img {
+    position: absolute;
+    right: -130px;
+    top: -40px;
+    z-index: 0;
+    width: 60%;
+  }
+
   .value-prop-grid,
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -272,15 +279,64 @@ ul.footer-nav li a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
+  .hero-text {
+    grid-area: hero-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+  .hero-images {
+    grid-area: hero-image1;
+    height: 400px;
+    background: url('./images/bg-intro-mobile.svg') center center / cover
+      no-repeat;
+  }
+
+  .hero-images img {
+    position: absolute;
+    top: -90px;
+    left: 0px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    grid-area: hero-image2;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'hero-image1'
+      'hero-image2'
+      'hero-text';
+  }
+
+  .hero-text button.cta {
+    max-width: 180px;
+  }
+
+  #value-prop {
+    margin-top: 100px;
+  }
   .value-prop-grid,
   .articles-grid {
-    display: block;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    margin: 0 auto;
     text-align: center;
   }
   .container {
     max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 30px;
+  }
+  .article {
+    max-width: 400px;
     margin: 0 auto;
   }
 }
