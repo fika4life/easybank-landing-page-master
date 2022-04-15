@@ -136,6 +136,7 @@ button.cta {
   right: -130px;
   top: -40px;
   z-index: 0;
+  width: 50%;
 }
 
 /* value prop grid section */
@@ -162,7 +163,7 @@ button.cta {
   padding-top: 50px;
 }
 
-#latest-articles .articles-grid {
+.articles-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -253,4 +254,33 @@ ul.footer-nav li a {
 .footer-right p {
   margin-top: 2rem;
   font-size: 15px;
+}
+
+@media screen and (max-width: 960px) {
+  .value-prop-grid,
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .article {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .value-prop-grid,
+  .articles-grid {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
