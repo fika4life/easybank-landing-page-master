@@ -85,6 +85,9 @@ nav {
   padding: 1em;
 }
 
+.menu-bar {
+  display: none;
+}
 nav ul.main-nav li {
   color: var(--grayish-blue);
   margin-right: 2em;
