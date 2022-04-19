@@ -374,8 +374,6 @@ ul.footer-nav li a:hover {
     margin: 6px 0;
   }
 
-  .menu-bar.is-active {
-  }
   .menu-bar.is-active div:nth-child(1) {
     transform: translate(-2px, 3px) rotate(-45deg);
   }
